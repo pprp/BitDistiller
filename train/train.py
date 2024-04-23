@@ -24,6 +24,8 @@ from mytrainer import KDTrainer
 import random
 from tqdm import tqdm
 
+import deepspeed 
+deepspeed.ops.op_builder.CPUAdamBuilder().load()
 
 
 def _make_r_io_base(f, mode: str):
